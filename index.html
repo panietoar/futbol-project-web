@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Futbol project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contaner">
+        <header class="site-header">
+            <h1>Futbol Project</h1>
+        </header>
+        <section class="row">
+
+            <nav class="two columns main-nav">
+                <ul>
+                    <li>
+                        <a href="#">Players</a>
+                    </li>
+                    <li>
+                        <a href="#">Teams</a>
+                    </li>
+                    <li>
+                        <a href="#">Matches</a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="ten columns">
+                <div id="player-list">
+                    <player-card v-for="player in players" :key="player.id" :full-name="player.fullName" :id-team="player.idTeam" :position="player.position" :yellow-card="player.yellowCard" :red-card="player.redCard" :id-player="player.id">
+                    </player-card>
+                </div>
+            </section>
+        </section>
+        <footer>
+
+        </footer>
+
+    </div>
+    <script data-main="scripts/app" src="lib/require.js"></script>
+    <script type="text/x-template" id="player-card-template">
+        <div class="container player-card">
+            <div class="row">
+                <a :href="'player/' + idPlayer">
+                    <header class="player-name">
+                        <h4>{{fullName}}</h4>
+                    </header>
+                </a>
+            </div>
+            <div class="row">
+                <div class="two columns player-pic">
+                    <img src="https://give.uwsp.edu/image/staff/default_member_image.png" alt="Player" width="100">
+                </div>
+                <div class="nine columns player-info">
+                    <div class="row">
+                        <div class="eight columns player-team-info">
+                            <div class="row player-team-name info-detail">
+                                <span class="two columns player-info-label">Team:</span>
+                                <span class="ten columns player-info-text">{{idTeam}}</span>
+                            </div>
+                            <div class="row player-team-position info-detail">
+                                <span class="two columns player-info-label">Position:</span>
+                                <span class="ten columns player-info-text">{{position}}</span>
+                            </div>
+                        </div>
+                        <div class="four columns player-card-info">
+                            <div class="row player-card-yellow info-detail">
+                                <span class="six columns player-info-label">Yellow cards:</span>
+                                <span class="six columns player-info-text">{{yellowCard}}</span>
+                            </div>
+                            <div class="row player-card-red info-detail">
+                                <span class="six columns player-info-label">Red cards:</span>
+                                <span class="six columns player-info-text">{{redCard}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</body>
+
+</html>

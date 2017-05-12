@@ -1,0 +1,54 @@
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+header.site-header {
+    border-bottom: 2px solid #ddd;
+}
+
+nav.main-nav {
+    border-right: 2px solid #DDD;
+}
+
+nav.main-nav ul {
+    margin-top: 2.5em;
+}
+
+nav.main-nav ul li {
+    list-style: none;
+}
+
+nav.main-nav ul li a {
+    margin-left: 3em;
+}
+
+.player-name h4 {
+    margin-bottom: 0;
+}
+
+.player-card {
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    margin: 1.5em auto;
+}
+
+.player-card .player-pic,
+.player-card .player-info {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+.player-pic img {
+    vertical-align: middle;
+}
+
+header.player-name {
+    text-align: center;
+    background-color: steelblue;
+    color: white;
+}
