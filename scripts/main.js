@@ -21,6 +21,11 @@ define([
                 el: '#player-list',
                 data: function() {
                     return playersData;
+                },
+                methods: {
+                    searchPlayer: function(event) {
+                        //Not implemented in web api
+                    }
                 }
             });
         },

@@ -35,6 +35,14 @@ header.player-name {
     text-align: center;
 }
 
+.player-controls {
+    margin-top: 1.5em;
+}
+
+.player-controls div:nth-child(2) {
+    float: right;
+}
+
 @media (min-width: 750px) {
     .player-pic {
         display: inline-block;

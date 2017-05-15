@@ -32,6 +32,16 @@
             </nav>
             <section class="ten columns">
                 <div id="player-list">
+                    <div class="container row player-controls">
+                        <div class="three columns">
+                            <form v-on:submit.prevent="searchPlayer">
+                                <input type="text" id="search-term" placeholder="Search Player">
+                            </form>
+                        </div>
+                        <div class="three columns">
+                            <a href="player" class="button button-primary">Add player</a>
+                        </div>
+                    </div>
                     <player-card v-for="player in players" :key="player.id" :full-name="player.fullName" :id-team="player.idTeam" :position="player.position" :yellow-card="player.yellowCard" :red-card="player.redCard" :id-player="player.id">
                     </player-card>
                 </div>

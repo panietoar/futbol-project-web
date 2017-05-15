@@ -10,11 +10,11 @@ define([
             playerList: '/api/player/lists'
         },
 
-        getPlayerList: function() {
-            return $.getJSON(this.API_HOST + this.URLS.playerList + '.json');
+        getPlayerList: function(search) {
+            return $.getJSON(this.API_HOST + this.URLS.playerList + (search ? search : '') + '.json');
         },
 
-        getPlayer: function() {
+        getPlayer: function(player) {
             return $.getJSON(this.API_HOST + this.URLS.player + '/' + player.id + '.json');
         },
 
