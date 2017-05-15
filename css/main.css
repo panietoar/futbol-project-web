@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+header.site-header {
+    border-bottom: 2px solid #ddd;
+}
+
+nav.main-nav {
+    border-right: 2px solid #ddd;
+}
+
+nav.main-nav ul {
+    margin-top: 2.5em;
+}
+
+nav.main-nav ul li {
+    list-style: none;
+}
+
+nav.main-nav ul li a {
+    margin-left: 3em;
+}

@@ -41,48 +41,63 @@
 
         </footer>
 
-    </div>
-    <script data-main="scripts/app" src="lib/require.js"></script>
-    <script type="text/x-template" id="player-card-template">
-        <div class="container player-card">
-            <div class="row">
-                <a :href="'player/' + idPlayer">
-                    <header class="player-name">
-                        <h4>{{fullName}}</h4>
-                    </header>
-                </a>
-            </div>
-            <div class="row">
-                <div class="two columns player-pic">
-                    <img src="https://give.uwsp.edu/image/staff/default_member_image.png" alt="Player" width="100">
+        <script data-main="scripts/app" src="lib/require.js"></script>
+        <script type="text/x-template" id="player-card-template">
+            <div class="container player-card">
+                <div class="row">
+                    <a :href="'player/' + idPlayer">
+                        <header class="player-name">
+                            <h4>{{fullName}}</h4>
+                        </header>
+                    </a>
                 </div>
-                <div class="nine columns player-info">
-                    <div class="row">
-                        <div class="eight columns player-team-info">
-                            <div class="row player-team-name info-detail">
-                                <span class="two columns player-info-label">Team:</span>
-                                <span class="ten columns player-info-text">{{idTeam}}</span>
+                <div>
+                    <div class="player-pic">
+                        <img src="https://give.uwsp.edu/image/staff/default_member_image.png" width="100" alt="Player">
+                    </div>
+                    <div class="player-info">
+                        <div class="row">
+                            <div class="seven columns player-team-info">
+                                <div class="row player-team-name info-detail">
+                                    <div class="three columns">
+                                        <p class="player-info-label">Team:</p>
+                                    </div>
+                                    <div class="eight columns">
+                                        <p class="player-info-text">{{idTeam}}</p>
+                                    </div>
+                                </div>
+                                <div class="row player-team-position info-detail">
+                                    <div class="three columns">
+                                        <p class="player-info-label">Position:</p>
+                                    </div>
+                                    <div class="eight columns">
+                                        <p class="player-info-text">{{position}}</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="row player-team-position info-detail">
-                                <span class="two columns player-info-label">Position:</span>
-                                <span class="ten columns player-info-text">{{position}}</span>
-                            </div>
-                        </div>
-                        <div class="four columns player-card-info">
-                            <div class="row player-card-yellow info-detail">
-                                <span class="six columns player-info-label">Yellow cards:</span>
-                                <span class="six columns player-info-text">{{yellowCard}}</span>
-                            </div>
-                            <div class="row player-card-red info-detail">
-                                <span class="six columns player-info-label">Red cards:</span>
-                                <span class="six columns player-info-text">{{redCard}}</span>
+                            <div class="five columns player-card-info">
+                                <div class="row player-card-yellow info-detail">
+                                    <div class="six columns">
+                                        <p class="player-info-label">Yellow cards:</p>
+                                    </div>
+                                    <div class="six columns">
+                                        <p class="player-info-text">{{yellowCard}}</p>
+                                    </div>
+                                </div>
+                                <div class="row player-card-red info-detail">
+                                    <div class="six columns">
+                                        <p class="player-info-label">Red cards:</p>
+                                    </div>
+                                    <div class="six columns">
+                                        <p class="player-info-text">{{redCard}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </script>
+        </script>
 </body>
 
 </html>
