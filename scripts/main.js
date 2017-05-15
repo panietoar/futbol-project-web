@@ -2,13 +2,13 @@ define([
     'jquery',
     'vue',
     'app/services/playerService'
-], function($, Vue, futbolService) {
+], function($, Vue, playerService) {
     'use strict';
     return {
 
         init: function() {
             this.registerComponents();
-            futbolService.getPlayerList().done(this.processData);
+            playerService.getPlayerList().done(this.processData);
         },
 
         processData: function(data) {
