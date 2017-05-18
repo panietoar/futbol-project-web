@@ -1,25 +1,16 @@
 [{
         "id": "59133d90784a84d674f7c3b1",
-        "idTeam": 123,
-        "fullName": "Santa fe",
-        "position": 0,
-        "yellowCard": 0,
-        "redCard": 0
+        "teamName": "Junior",
+        "fullName": "Santa fe"
     },
     {
         "id": "5913cd0c784a84dc43272717",
-        "idTeam": 72286315,
-        "fullName": "Ricardo Mejia Cerquera",
-        "position": 1,
-        "yellowCard": 0,
-        "redCard": 0
+        "teamName": "Los locos",
+        "fullName": "Ricardo Mejia Cerquera"
     },
     {
         "id": "5913cd0c784a84dc43272718",
-        "idTeam": 123,
-        "fullName": "Santa fe",
-        "position": 0,
-        "yellowCard": 0,
-        "redCard": 0
+        "teamName": "Los rusos",
+        "fullName": "Santa fe"
     }
 ]

@@ -42,7 +42,11 @@
                             <a href="player" class="button button-primary">Add player</a>
                         </div>
                     </div>
-                    <player-card v-for="player in players" :key="player.id" :full-name="player.fullName" :id-team="player.idTeam" :position="player.position" :yellow-card="player.yellowCard" :red-card="player.redCard" :id-player="player.id">
+                    <player-card v-for="player in players" 
+                        :key="player.id" 
+                        :full-name="player.fullName" 
+                        :team-name="player.teamName" 
+                        :id-player="player.id">
                     </player-card>
                 </div>
             </section>
@@ -54,60 +58,25 @@
         <script data-main="scripts/app" src="lib/require.js"></script>
         <script type="text/x-template" id="player-card-template">
             <div class="container player-card">
+            <div class="row">
+                <div class="one column player-pic">
+                    <img src="https://give.uwsp.edu/image/staff/default_member_image.png" width="100" alt="Player">
+                </div>
                 <div class="row">
                     <a :href="'player/' + idPlayer">
                         <header class="player-name">
                             <h4>{{fullName}}</h4>
                         </header>
+                        <div class="player-team-name info-detail">
+                            <p class="player-info-label">Team:</p>
+                            <p class="player-info-text">{{teamName}}</p>
+                        </div>
                     </a>
                 </div>
-                <div>
-                    <div class="player-pic">
-                        <img src="https://give.uwsp.edu/image/staff/default_member_image.png" width="100" alt="Player">
-                    </div>
-                    <div class="player-info">
-                        <div class="row">
-                            <div class="seven columns player-team-info">
-                                <div class="row player-team-name info-detail">
-                                    <div class="three columns">
-                                        <p class="player-info-label">Team:</p>
-                                    </div>
-                                    <div class="eight columns">
-                                        <p class="player-info-text">{{idTeam}}</p>
-                                    </div>
-                                </div>
-                                <div class="row player-team-position info-detail">
-                                    <div class="three columns">
-                                        <p class="player-info-label">Position:</p>
-                                    </div>
-                                    <div class="eight columns">
-                                        <p class="player-info-text">{{position}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="five columns player-card-info">
-                                <div class="row player-card-yellow info-detail">
-                                    <div class="six columns">
-                                        <p class="player-info-label">Yellow cards:</p>
-                                    </div>
-                                    <div class="six columns">
-                                        <p class="player-info-text">{{yellowCard}}</p>
-                                    </div>
-                                </div>
-                                <div class="row player-card-red info-detail">
-                                    <div class="six columns">
-                                        <p class="player-info-label">Red cards:</p>
-                                    </div>
-                                    <div class="six columns">
-                                        <p class="player-info-text">{{redCard}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+        </div>
         </script>
+        
 </body>
 
 </html>

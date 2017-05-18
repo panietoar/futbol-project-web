@@ -33,7 +33,7 @@ define([
         registerComponents: function() {
             Vue.component('player-card', {
                 template: '#player-card-template',
-                props: ['fullName', 'idTeam', 'position', 'yellowCard', 'redCard', 'idPlayer']
+                props: ['fullName', 'teamName', 'idPlayer']
             });
         }
     }
