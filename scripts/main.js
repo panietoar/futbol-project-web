@@ -2,38 +2,52 @@ define([
     'jquery',
     'vue',
     'app/services/playerService'
-], function($, Vue, playerService) {
+], function ($, Vue, playerService) {
     'use strict';
     return {
 
-        init: function() {
+        init: function () {
             this.registerComponents();
-            playerService.getPlayerList().done(this.processData);
-        },
-
-        processData: function(data) {
-
-            var playersData = {
-                players: data
-            };
 
             var playersView = new Vue({
-                el: '#player-list',
-                data: function() {
-                    return playersData;
+                el: '#app',
+                data: {
+                    currentView: 'player-list'
                 },
+                
                 methods: {
-                    searchPlayer: function(event) {
-                        //Not implemented in web api
+                    changeView: function (viewId) {
+                        this.currentView = viewId;
                     }
                 }
+                
             });
         },
 
-        registerComponents: function() {
+        registerComponents: function () {
             Vue.component('player-card', {
                 template: '#player-card-template',
                 props: ['fullName', 'teamName', 'idPlayer']
+            });
+
+            Vue.component('player-list', {
+                template: '#player-list-template',
+                data: function () {
+                    return {
+                        players: []
+                    };
+                },
+                methods: {
+                    searchPlayer: function (event) {
+                        //Not implemented in web api
+                    }
+                },
+                mounted: function () {
+                    var self = this;
+                    playerService.getPlayerList().done(function name(playersData) {
+                        self.$data.players = playersData;
+                    });
+                }
             });
         }
     }

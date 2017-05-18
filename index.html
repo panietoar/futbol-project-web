@@ -31,23 +31,8 @@
                 </ul>
             </nav>
             <section class="ten columns">
-                <div id="player-list">
-                    <div class="container row player-controls">
-                        <div class="three columns">
-                            <form v-on:submit.prevent="searchPlayer">
-                                <input type="text" id="search-term" placeholder="Search Player">
-                            </form>
-                        </div>
-                        <div class="three columns">
-                            <a href="player" class="button button-primary">Add player</a>
-                        </div>
-                    </div>
-                    <player-card v-for="player in players" 
-                        :key="player.id" 
-                        :full-name="player.fullName" 
-                        :team-name="player.teamName" 
-                        :id-player="player.id">
-                    </player-card>
+                <div id="app">
+                    <component :is="currentView"></component>   
                 </div>
             </section>
         </section>
@@ -56,6 +41,26 @@
         </footer>
 
         <script data-main="scripts/app" src="lib/require.js"></script>
+        <script type="text/x-template" id="player-list-template">
+            <div id="player-list">
+                <div class="container row player-controls">
+                    <div class="three columns">
+                        <form v-on:submit.prevent="searchPlayer">
+                            <input type="text" id="search-term" placeholder="Search Player">
+                        </form>
+                    </div>
+                    <div class="three columns">
+                        <a href="player" class="button button-primary">Add player</a>
+                    </div>
+                </div>
+                <player-card v-for="player in players" 
+                    :key="player.id" 
+                    :full-name="player.fullName" 
+                    :team-name="player.teamName" 
+                    :id-player="player.id">
+                </player-card>
+            </div>
+        </script>
         <script type="text/x-template" id="player-card-template">
             <div class="container player-card">
             <div class="row">
