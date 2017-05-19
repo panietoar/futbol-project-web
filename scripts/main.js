@@ -6,10 +6,17 @@ define([
     'use strict';
     return {
 
+        appVm: null, 
+
+        componentMap: {
+            '/players': 'player-list',
+            '/player' : 'player-detail'
+        },
+
         init: function () {
             this.registerComponents();
-
-            var playersView = new Vue({
+            this.registerNavEvents();
+            this.appVm = new Vue({
                 el: '#app',
                 data: {
                     currentView: 'player-list'
@@ -49,6 +56,28 @@ define([
                     });
                 }
             });
+
+            Vue.component('player-detail', {
+                template: '<h2>Hola mundo</h2>'
+            })
+        },
+
+        registerNavEvents: function() {
+            var self = this;
+            $('nav.main-nav ul li').click(function (event){
+                $('nav.main-nav ul li').removeClass('active');
+                $(this).addClass('active');
+                var route = $(this).children('a').attr('href');
+                self.changeCurrentView(route);
+                return false;
+            });
+        },
+
+        changeCurrentView: function(route) {
+            var targetComponent = this.componentMap[route];
+            if(targetComponent) {
+                this.appVm.changeView(targetComponent)
+            }
         }
     }
 });
