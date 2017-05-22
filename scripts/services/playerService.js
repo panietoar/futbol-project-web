@@ -14,8 +14,8 @@ define([
             return $.getJSON(this.API_HOST + this.URLS.playerList + (search ? search : '') + '.json');
         },
 
-        getPlayer: function(player) {
-            return $.getJSON(this.API_HOST + this.URLS.player + '/' + player.id + '.json');
+        getPlayer: function(playerId) {
+            return $.getJSON(this.API_HOST + this.URLS.player + '/' + playerId + '.json');
         },
 
         createPlayer: function(player) {

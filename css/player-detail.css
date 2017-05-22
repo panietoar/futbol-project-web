@@ -1,0 +1,41 @@
+.player-detail .player-image {
+    text-align: center;
+}
+
+.player-detail .labels {
+    transform: translateY(50%);
+    padding-left: 0.5em;
+}
+
+.player-detail .values {
+    text-align: center;
+}
+
+.player-detail .data-row {
+    border-left: 1px solid #ccc;
+}
+
+.values input {
+    box-sizing: content-box;
+    padding: 5px 20px;
+    border: 0 solid #b7b7b7;
+    border-bottom-width: 1px;
+    color: #7E7D7F;
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-delete {
+    color: #FFF;
+    background-color: #E36249;
+    border-color: #E36249;
+}
+
+.button-delete:hover {
+    color: #FFF;
+    background-color: #D93F20;
+    border-color: #D93F20;
+}

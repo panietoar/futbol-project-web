@@ -7,6 +7,7 @@ define([
     return {
 
         appVm: null, 
+        selectedPlayerId: null,
 
         componentMap: {
             '/players': 'player-list',
@@ -32,9 +33,17 @@ define([
         },
 
         registerComponents: function () {
+            var root = this;
             Vue.component('player-card', {
                 template: '#player-card-template',
-                props: ['fullName', 'teamName', 'idPlayer']
+                props: ['fullName', 'teamName', 'idPlayer'],
+                methods: {
+                    navigateToPlayer: function(event) {
+                        var route = event.currentTarget.href;
+                        root.changeCurrentView(route);
+                        return false;
+                    }
+                }
             });
 
             Vue.component('player-list', {
@@ -58,7 +67,26 @@ define([
             });
 
             Vue.component('player-detail', {
-                template: '<h2>Hola mundo</h2>'
+                template: '#player-detail-template',
+                data: function() {
+                    return {
+                        player: {}
+                    }
+                },
+                methods: {
+                    savePlayer: function() {
+                        //Not implemented in web api
+                    },
+                    deletePlayer: function() {
+                        //Not implemented in web api
+                    }
+                },
+                mounted: function() {
+                    var self = this;
+                    playerService.getPlayer(root.selectedPlayerId).done(function (playerData) {
+                        self.$data.player = playerData;
+                    });
+                }
             })
         },
 
@@ -74,6 +102,11 @@ define([
         },
 
         changeCurrentView: function(route) {
+            if (route.includes('/player/')) {
+                var paramDelimiterIndex = route.lastIndexOf('/') ;
+                this.selectedPlayerId = route.slice(paramDelimiterIndex + 1);
+                route = '/player';
+            }
             var targetComponent = this.componentMap[route];
             if(targetComponent) {
                 this.appVm.changeView(targetComponent)
