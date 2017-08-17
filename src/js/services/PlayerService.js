@@ -8,35 +8,35 @@ export default {
         playerList: '/api/player/lists'
     },
 
-    getPlayerList: function () {
+    getPlayerList: function() {
         return axios.get(this.API_HOST + this.URLS.playerList + '.json');
     },
 
-    getPlayer: function () {
+    getPlayer: function() {
         return axios.get(this.API_HOST + this.URLS.player + '/' + player.id + '.json');
     },
-/*
-    createPlayer: function (player) {
-        var request = axios.ajax(this.API_HOST + this.URLS.player + '.json', {
-            method: 'POST',
-            dataType: 'json',
-            data: JSON.stringify(player)
-        });
-    },
+    /*
+        createPlayer: function (player) {
+            var request = axios.ajax(this.API_HOST + this.URLS.player + '.json', {
+                method: 'POST',
+                dataType: 'json',
+                data: JSON.stringify(player)
+            });
+        },
 
-    savePlayer: function (player) {
-        var request = axios.ajax(this.API_HOST + this.URLS.player + '/' + player.id + '.json', {
-            method: 'POST',
-            dataType: 'json',
-            data: JSON.stringify(player)
-        });
-    },
+        savePlayer: function (player) {
+            var request = axios.ajax(this.API_HOST + this.URLS.player + '/' + player.id + '.json', {
+                method: 'POST',
+                dataType: 'json',
+                data: JSON.stringify(player)
+            });
+        },
 
-    deletePlayer: function (player) {
-        var request = axios.ajax(this.API_HOST + this.URLS.player + '/' + player.id + '.json', {
-            method: 'DELETE',
-            dataType: 'json'
-        });
-    }*/
+        deletePlayer: function (player) {
+            var request = axios.ajax(this.API_HOST + this.URLS.player + '/' + player.id + '.json', {
+                method: 'DELETE',
+                dataType: 'json'
+            });
+        }*/
 
 }
