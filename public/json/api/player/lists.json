@@ -1,19 +1,16 @@
 [{
         "id": "59133d90784a84d674f7c3b1",
         "teamName": "Junior",
-        "fullName": "El Pibe Valderrama",
-        "avatar": "public/img/avatar.png"
+        "fullName": "El Pibe Valderrama"
     },
     {
         "id": "5913cd0c784a84dc43272717",
         "teamName": "Los locos",
-        "fullName": "Ricardo Mejia Cerquera",
-        "avatar": "public/img/avatar.png"
+        "fullName": "Ricardo Mejia Cerquera"
     },
     {
         "id": "5913cd0c784a84dc43272718",
         "teamName": "Los rusos",
-        "fullName": "Fulano de tal",
-        "avatar": "public/img/avatar.png"
+        "fullName": "Fulano de tal"
     }
 ]

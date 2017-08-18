@@ -16,7 +16,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-toolbar class="blue" dark>
+    <v-toolbar class="blue" dark fixed>
       <v-toolbar-title>Futbol Teams</v-toolbar-title>
     </v-toolbar>
 
