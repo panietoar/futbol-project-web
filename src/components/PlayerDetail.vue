@@ -1,13 +1,20 @@
 <template>
   <div>
-      <h1>Player details</h1>
+      <h1>Player {{ id }} details</h1>
       <router-link to="/">Ir a lista</router-link>
   </div>
 </template>
 
 <script>
-export default {
 
+import playerService from '../js/services/PlayerService.js';
+
+export default {
+  data() {
+    return {
+      id: this.$route.params.id
+    };
+  }
 }
 </script>
 

@@ -3,16 +3,15 @@
 
     <v-navigation-drawer permanent clipped light>
       <v-list dense class="pt-0">
-        <v-list-tile v-for="item in items" :key="item.title">
+        <v-list-tile v-for="item in items" :key="item.title" :to="item.route">
           
-          <v-list-tile-action :href="item.route">
+          <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
           
           <v-list-tile-content>
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile-content>
-
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
@@ -23,7 +22,9 @@
 
     <main>
       <v-container fluid>
-        <router-view></router-view>
+        <transition name="custom-classes-transition" enter-active-class="animated fadeIn" mode="out-in">
+          <router-view></router-view>
+        </transition>
       </v-container>
     </main>
 
@@ -32,7 +33,7 @@
 
 <script>
 
-import playerService from './js/services/PlayerService.js';
+
 
 export default {
   data() {
@@ -41,13 +42,6 @@ export default {
         { title: 'Players', icon: 'person', route: '/' },
         { title: 'Teams', icon: 'group', route: '/teams' }
       ]
-    }
-  },
-  methods: {
-    getPlayers() {
-      playerService.getPlayerList().then(function(response) {
-        console.log(JSON.stringify(response.data));
-      });
     }
   }
 }
