@@ -1,0 +1,13 @@
+{
+    "id": "5913cd0c784a84dc43272717",
+    "teamName": "Los Rusos",
+    "fullName": "Fulano de tal",
+    "fouls": 6,
+    "goals": 1,
+    "yellowCard": 8,
+    "redCard": 2,
+    "email": "ricarmej@mail.mai",
+    "shirt": 6,
+    "position": "Defensa",
+    "avatar": "public/img/avatar.png"
+}

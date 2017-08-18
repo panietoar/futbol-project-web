@@ -12,8 +12,8 @@ export default {
         return axios.get(this.API_HOST + this.URLS.playerList + '.json');
     },
 
-    getPlayer: function() {
-        return axios.get(this.API_HOST + this.URLS.player + '/' + player.id + '.json');
+    getPlayer: function(id) {
+        return axios.get(this.API_HOST + this.URLS.player + '/' + id + '.json');
     },
     /*
         createPlayer: function (player) {

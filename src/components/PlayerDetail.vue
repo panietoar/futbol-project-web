@@ -1,7 +1,6 @@
 <template>
   <div>
-      <h1>Player {{ id }} details</h1>
-      <router-link to="/">Ir a lista</router-link>
+
   </div>
 </template>
 
