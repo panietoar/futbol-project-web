@@ -21,7 +21,7 @@
               <v-list-tile-sub-title>Personal</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-divider inset></v-divider>
+          <v-divider></v-divider>
           <v-list-tile>
             <v-list-tile-action>
               <v-icon class="indigo--text">group</v-icon>
@@ -50,7 +50,7 @@
               <v-list-tile-sub-title>Shirt</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-divider inset></v-divider>
+          <v-divider ></v-divider>
 
           <v-list-tile>
             <v-list-tile-action>
@@ -91,7 +91,13 @@
               <v-list-tile-sub-title>Red Cards</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
-
+          <v-divider ></v-divider>
+          <v-btn 
+            color="info"
+            to="/">
+              <v-icon left dark>arrow_back</v-icon>
+              Back
+          </v-btn>
         </v-list>
       </v-card>
     </v-flex>

@@ -1,7 +1,13 @@
 <template>
-  <v-app id="futbol-teams" toolbar>
+  <v-app id="futbol-teams">
 
-    <v-navigation-drawer permanent clipped light>
+    <v-navigation-drawer 
+      persistent 
+      clipped
+      app
+      disable-route-watcher
+      v-model="navigationOpen">
+
       <v-list dense class="pt-0">
         <v-list-tile v-for="item in items" :key="item.title" :to="item.route">
           
@@ -16,16 +22,19 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-toolbar class="blue" dark fixed>
+    <v-toolbar class="blue" app dark fixed>
+      <v-toolbar-side-icon @click.stop="toggleNavigation"></v-toolbar-side-icon>
       <v-toolbar-title>Futbol Teams</v-toolbar-title>
     </v-toolbar>
 
     <main>
-      <v-container fluid>
-        <transition name="custom-classes-transition" enter-active-class="animated fadeIn" mode="out-in">
-          <router-view></router-view>
-        </transition>
-      </v-container>
+      <v-content>
+        <v-container fluid>
+          <transition name="custom-classes-transition" enter-active-class="animated fadeIn" mode="out-in">
+            <router-view></router-view>
+          </transition>
+        </v-container>
+      </v-content>
     </main>
 
   </v-app>
@@ -39,7 +48,13 @@ export default {
       items: [
         { title: 'Players', icon: 'person', route: '/' },
         { title: 'Teams', icon: 'group', route: '/teams' }
-      ]
+      ],
+      navigationOpen: false
+    }
+  },
+  methods: {
+    toggleNavigation() {
+      this.navigationOpen = !this.navigationOpen;
     }
   }
 }
