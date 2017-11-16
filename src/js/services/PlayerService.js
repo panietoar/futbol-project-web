@@ -5,7 +5,7 @@ export default {
     API_HOST: 'public/json', //api service url
     URLS: {
         player: '/api/player',
-        playerList: '/api/player/lists'
+        playerList: '/api/player'
     },
 
     getPlayerList: function() {

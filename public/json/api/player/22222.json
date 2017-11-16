@@ -1,0 +1,17 @@
+{
+  "id": "22222",
+  "fullName": "El Pibe",
+  "team": {
+    "id": "1",
+    "name": "Colombia",
+    "points": 0
+  },
+  "position": {
+    "id": "0",
+    "name": "goalkeeper"
+  },
+  "yellowCard": 0,
+  "redCard": 0,
+  "goals": 1,
+  "email": "pibe@mail.com"
+}

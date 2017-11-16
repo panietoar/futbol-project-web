@@ -1,0 +1,17 @@
+{
+  "id": "00000",
+  "team": {
+    "id": "1",
+    "name": "Colombia",
+    "points": 0
+  },
+  "fullName": "RPMC",
+  "position": {
+    "id": "0",
+    "name": "Delantero"
+  },
+  "yellowCard": 0,
+  "redCard": 0,
+  "goals": 5,
+  "email": "rich@mail.com"
+}

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="columns-8 centered">
         <h3>Teams</h3>
     </div>
 </template>

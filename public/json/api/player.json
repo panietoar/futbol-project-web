@@ -1,0 +1,91 @@
+[{
+        "id": "00000",
+        "team": {
+            "id": "1",
+            "name": "Colombia",
+            "points": 0
+        },
+        "fullName": "RPMC",
+        "position": {
+            "id": "0",
+            "name": "goalkeeper"
+        },
+        "yellowCard": 0,
+        "redCard": 0
+    },
+    {
+        "id": "22222",
+        "team": {
+            "id": "1",
+            "name": "Colombia",
+            "points": 0
+        },
+        "fullName": "player3",
+        "position": {
+            "id": "2",
+            "name": "Midfielder"
+        },
+        "yellowCard": 0,
+        "redCard": 0
+    },
+    {
+        "id": "33333",
+        "team": {
+            "id": "2",
+            "name": "Brasil",
+            "points": 0
+        },
+        "fullName": "player3",
+        "position": {
+            "id": "3",
+            "name": "striker"
+        },
+        "yellowCard": 0,
+        "redCard": 0
+    },
+    {
+        "id": "4444",
+        "team": {
+            "id": "3",
+            "name": "Argentina",
+            "points": 0
+        },
+        "fullName": "player4",
+        "position": {
+            "id": "2",
+            "name": "Midfielder"
+        },
+        "yellowCard": 0,
+        "redCard": 0
+    },
+    {
+        "id": "666",
+        "team": {
+            "id": "3",
+            "name": "Argentina",
+            "points": 0
+        },
+        "fullName": "to delete",
+        "position": {
+            "id": "2",
+            "name": "Midfielder"
+        },
+        "yellowCard": 0,
+        "redCard": 0
+    },
+    {
+        "id": "72727272",
+        "team": {
+            "id": "2",
+            "name": "Brasil",
+            "points": 0
+        },
+        "fullName": "Pablo Nieto",
+        "position": {
+            "id": "3",
+            "name": "striker"
+        },
+        "yellowCard": 0,
+        "redCard": 0
+    }
+]

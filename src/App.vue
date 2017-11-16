@@ -1,65 +1,96 @@
 <template>
-  <v-app id="futbol-teams">
+  <div>
+    <app-navigation :open="navigationClosed"></app-navigation>
 
-    <v-navigation-drawer 
-      persistent 
-      clipped
-      app
-      disable-route-watcher
-      v-model="navigationOpen">
+      <div class="container" :class="{expanded: navigationClosed}">
 
-      <v-list dense class="pt-0">
-        <v-list-tile v-for="item in items" :key="item.title" :to="item.route">
-          
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          
-          <v-list-tile-content>
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
+        <app-toolbar @toggle="toggleNavigation"></app-toolbar>
 
-    <v-toolbar class="blue" app dark fixed>
-      <v-toolbar-side-icon @click.stop="toggleNavigation"></v-toolbar-side-icon>
-      <v-toolbar-title>Futbol Teams</v-toolbar-title>
-    </v-toolbar>
-
-    <main>
-      <v-content>
-        <v-container fluid>
+        <main>
           <transition name="custom-classes-transition" enter-active-class="animated fadeIn" mode="out-in">
             <router-view></router-view>
           </transition>
-        </v-container>
-      </v-content>
-    </main>
+        </main>
+      </div>
 
-  </v-app>
+  </div>
 </template>
 
 <script>
 
+import Navigation from './components/Navigation.vue';
+import Toolbar from './components/Toolbar.vue';
+
 export default {
+  components: {
+    appNavigation: Navigation,
+    appToolbar: Toolbar
+  },
   data() {
     return {
-      items: [
-        { title: 'Players', icon: 'person', route: '/' },
-        { title: 'Teams', icon: 'group', route: '/teams' }
-      ],
-      navigationOpen: false
+      navigationClosed: true
     }
   },
   methods: {
     toggleNavigation() {
-      this.navigationOpen = !this.navigationOpen;
+        this.navigationClosed = !this.navigationClosed;
     }
   }
 }
 </script>
 
-<style lang="stylus">
-  @import './stylus/main'
+<style lang="scss">
+
+  $font-color: #444;
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $font-color;
+    background-color: #EEE;
+  }
+
+  a {
+    color: $font-color;
+  }
+
+  i {
+    color: #888;
+  }
+
+  .container {
+    width: 75%;
+    float: right;
+    transition: width 0.5s;
+  }
+
+  .expanded {
+    width: 100%;
+  }
+
+  .columns-8 { 
+      width: 66.66%;
+  }
+
+  .centered {
+    margin: auto;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  .material-card {
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, .38);
+    background-color: white;
+    margin: 2em 1em;
+  }
+
+  .yellow-text {
+    color: gold;
+  }
+
+  .red-text {
+    color: red;
+  }
+
 </style>

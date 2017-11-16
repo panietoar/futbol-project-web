@@ -1,0 +1,17 @@
+{
+  "id": "33333",
+  "team": {
+    "id": "1",
+    "name": "Colombia",
+    "points": 0
+  },
+  "fullName": "Fulano De Tal",
+  "position": {
+    "id": "0",
+    "name": "Defensa"
+  },
+  "yellowCard": 2,
+  "redCard": 0,
+  "goals": 0,
+  "email": "fulano@mail.com"
+}
