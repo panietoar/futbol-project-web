@@ -34,18 +34,15 @@ export default {
         {},
         {
           text: "Full Name",
-          value: "fullName",
-          align: "center"
+          value: "fullName"
         },
         {
           text: "Id",
-          value: "id",
-          align: "center"
+          value: "id"
         },
         {
           text: "Team",
-          value: "team",
-          align: "center"
+          value: "team"
         }
       ],
       players: [],

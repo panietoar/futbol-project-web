@@ -17,7 +17,7 @@
           </div>
 
           <div>
-            <i class="material-icons">person</i>
+            <i class="material-icons">star</i>
             <div class="player-data-field">
               <input v-if="editMode" type="text" class="value-input" v-model="playerDetails.goals" >
               <label v-else class="value">{{ playerDetails.goals }}</label>
@@ -35,7 +35,7 @@
           </div>
 
           <div>
-            <i class="material-icons">directions</i>
+            <i class="material-icons">directions_run</i>
             <div class="player-data-field">
               <input v-if="editMode" type="text" class="value-input" v-model="playerDetails.position.name" >
               <label v-else class="value">{{ playerDetails.position.name }}</label>
@@ -140,7 +140,7 @@ input.value-input {
 
     .player-data-field {
       display: inline-block;
-      padding-left: 32px;
+      padding-left: 16px;
 
       label,
       input {
